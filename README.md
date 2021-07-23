@@ -1,6 +1,7 @@
 # Todo.ly
 Cypress Framework to validate todo.ly system:
-1- Sign up ( Positive and Negative testing )
+1- Sign up ( Positive and Negative testing ) 
+=> To Verify Sign up positive, Please testing edit under ./support/TestData.j the value of valid email
 2- Log in ( Positive and Negative testing )
 3- Create a new project add an item and edit the Item to done ( simple workflow any user shall do on the system) 
 
