@@ -4,8 +4,10 @@
   "description": "Simple end to end tests",
   "author": "HBC",
   "scripts": {
-    "open": "cypress open",
-    "test": "cypress run"
+    "report:generate": "npm run report:merge && marge mochawesome-bundle.json ",
+    "report:merge": "mochawesome-merge --reportDir ./mochawesome-report/mochawesome*.json > mochawesome-bundle.json",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "body-parser": "^1.4.3",
