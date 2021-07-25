@@ -5,7 +5,7 @@ class TodoPage {
   AddProject = "div.AddProjectLiDiv"
   AddprjInput = "#NewProjNameInput"
   AddprjButton = "#NewProjNameButton"
-  Newproject = "#ListIcon"
+  Newproject = "li.BaseProjectLi:nth-child(6) div:nth-child(1) tr:nth-child(1)  td:nth-child(3)"
   //items elements
   noitems = "div.NoItems"
   AddItem ='#NewItemContentInput'
