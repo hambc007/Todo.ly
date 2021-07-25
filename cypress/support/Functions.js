@@ -1,4 +1,4 @@
-const Login = require("../PageObjects/Login")
+const Login = require("../PageObjects/LogIn")
 const Signup = require("../PageObjects/Signup")
 
 export function SignUp (email, name, pwd) {

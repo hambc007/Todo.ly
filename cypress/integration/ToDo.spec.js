@@ -1,6 +1,6 @@
 const TodoPage = require("../PageObjects/TodoPage")
 const Signup = require("../PageObjects/Signup")
-const Login = require("../PageObjects/Login")
+const Login = require("../PageObjects/LogIn")
 const Functions = require("../support/Functions")
 const TestData = require("../support/TestData")
 
