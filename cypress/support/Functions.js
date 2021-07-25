@@ -18,7 +18,7 @@ export function LogIn (email, pwd) {
 }
 
 export function Random () {
-const uuid = () => Cypress._.random(0, 10000)
-const id = uuid()
-return (`${id}`)
+  const uuid = () => Cypress._.random(0, 10000)
+  const id = uuid()
+  return (`${id}`)
 }
