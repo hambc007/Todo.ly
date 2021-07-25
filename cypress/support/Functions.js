@@ -16,3 +16,9 @@ export function LogIn (email, pwd) {
   cy.get(Login.Password).type(pwd)
   cy.get(Login.LoginButton).first().click()
 }
+
+export function Random () {
+const uuid = () => Cypress._.random(0, 10000)
+const id = uuid()
+return (`${id}`)
+}

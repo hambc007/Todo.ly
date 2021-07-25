@@ -10,31 +10,34 @@ context('Validate Todo.ly', () => {
     cy.visit('http://todo.ly/')
   })
 
+  const validEmail = Functions.Random()+TestData.Validemail
+
   it('Verify creating User with invalid email', () => {
     Functions.SignUp(TestData.Invalidemail, TestData.Name, TestData.Pwd)
     cy.get(Signup.Error).should("be.visible").should('have.text',TestData.ErrorMessage)
   })    
 
   it('Verify creating user', () => {
-    Functions.SignUp(TestData.Validemail, TestData.Name, TestData.Pwd)
+    Functions.SignUp(validEmail, TestData.Name, TestData.Pwd)
+    cy.get(TodoPage.Header).should("be.visible")
     cy.get(TodoPage.ProjectTitle).should("be.visible").should("have.text",TestData.DefaultPrj)
   })    
 
-  it('Verify Login Negtive', () => {
+  it('Verify Login with invalid email', () => {
     Functions.LogIn(TestData.Invalidemail, TestData.Pwd)
     cy.get(Login.Error).should("be.visible").should('have.text',TestData.ErrorMessagelog)
   })
 
   it('Verify Login', () => {
-    Functions.LogIn(TestData.Validemail, TestData.Pwd)
+    Functions.LogIn(validEmail, TestData.Pwd)
     cy.get(TodoPage.Header).should("be.visible")
     cy.get(TodoPage.ProjectTitle).should("be.visible").should("have.text",TestData.DefaultPrj)
   })
 
-  it('Verify Adding a project', () => {
+  it('Verify Adding a project and an item', () => {
     let Donecount = 0 //doneitem counter
     cy.log('Log in to the system and add a project')
-    Functions.LogIn(TestData.Validemail, TestData.Pwd)
+    Functions.LogIn(validEmail, TestData.Pwd)
     cy.get(TodoPage.AddProject).first().click()
     cy.get(TodoPage.AddprjInput).type(TestData.NewPrj)
     cy.get(TodoPage.AddprjButton).click()

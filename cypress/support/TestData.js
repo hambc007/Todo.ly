@@ -1,5 +1,5 @@
 //please update Valid email value each time running the tests
-export const Validemail ='work1@email.com'
+export const Validemail ='Hamdiwork1@email.com'
 export const Invalidemail ='Testhamdi'
 export const Name ='Hamdi'
 export const Pwd ='12121212'
